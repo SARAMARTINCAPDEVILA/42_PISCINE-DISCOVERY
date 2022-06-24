@@ -1,197 +1,131 @@
-MENU ej https://dev.to/tognola/menu-hamburguesa-solo-con-css-facil-1doc
-
-! html 1st attempt!
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SNCF* Hamburguesa</title>
-    <link rel="stylesheet" href="menu.css" />
-    <style>
-      div {
-        width: 70px;
-        height: 15px;
-        background-color: black;
-        margin: 10px 0;
-      }
-    </style>
-  </head>
-  
-  <body class="full">
-     <> <div ></div> </area>
-    <div  > </div>
-    <div></div>
-<hr></hr>
- <h1 class="tit">🚂 SNCF - Burger 🍔</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Responsive</title>
+    <link rel="stylesheet" href="burger.css">
+   
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="C:\Users\Susanna\Desktop\P42\455-4553652_sncf-logo-sncf-png-transparent-png.png" alt="" class="logo">
+        </a>
+        <ul>
+            <li><a class="active" href="#">MENU SNCF</a></li>
+            <li><a href="#">Burgers</a></li>
+            <li><a href="#">Sides</a></li>
+            <li><a href="#">Sweets</a></li>
+            <li><a href="#">Drinks</a></li>
+        </ul>
+    </nav>
+    <section></section>
+</body>
+</html>142
 
-  
- 
-    <br ></br>
-     
-                <ul>
-
-                    <li class="pan">🔥 Coccion</li> </ul>
-
-                    <ul><li class="pat">🍟 sides</li> </ul>
-           <ul><li class="dri"> 🥤 bebidas</li>  </ul>
-                              <ul><li class="des"> 🍩 postres</li>  </ul> 
-  </body>
-</html>
-
-
-body {
-  font-family: sans-serif;
-}
-
-.respmenu a {
-  color: inherit;
-  text-decoration: none;
-  display: block;
-  padding: 10px 20px;
-  border-bottom: 2px solid #456789;
-  max-width: 200px;
-  background: #234567;
-  font-variant: small-caps;
-  text-shadow: 1px 1px black;
-}
-
-.respmenu input[type="checkbox"],
-.respmenu .fa-bars,
-.respmenu .fa-times {
-  position: absolute;
+*{
+background-image: URL();
+  list-style: none;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  right: 0;
-  top: 0;
-  width: 48px;
-  height: 48px;
 }
 
-.respmenu .fa-bars,
-.respmenu .fa-times {
-  font-size: 48px;
-  pointer-events: none;
+nav{
+  background: #96cd2f;
+  height: 80px;
+  width: 100%;
 }
-
-.respmenu input[type="checkbox"] {
-  opacity: 0;
+.enlace{
+  position: absolute;
+  padding: 20px 50px;
 }
-
-.respmenu {
-  color: white;
-  position: relative;
-  background: #123456;
-  min-height: 48px;
+.logo{
+  height: 40px;
 }
-
-.respmenu nav {
-  display: none;
+nav ul{
+  float: right;
+  margin-right: 20px;
 }
-
-.respmenu input:checked ~ nav {
-  display: block;
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
 }
-
-.respmenu input:checked ~ .fa-bars {
-  display: none;
-}
-
-.respmenu input:not(:checked) ~ .fa-times {
-  display: none;
-}
-
-/INTENTO 2/
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SNCF* Hamburguesa</title>
-    <link rel="stylesheet" href="menu.css" />
-    
-  </head>
-  
-  <body>
-
-    <nav class="nav">
-      <div class="nav_container">
-        <h1 class ="nav_logo">🚂 SNCF - Burger 🍔 </h1>
-     <div ></div>
-    <div  > </div>
-    <div></div>
-<hr></hr>
-
-
-    <br ></br>
-     
-                <ul>
-
-                    <li class="pan">🔥 Coccion</li> </ul>
-
-                    <ul><li class="pat">🍟 sides</li> </ul>
-           <ul><li class="dri"> 🥤 bebidas</li>  </ul>
-                              <ul><li class="des"> 🍩 postres</li>  </ul> 
-  </body>
-</html>
-
-
-.nav_logo {
+nav ul li a{
   color: black;
-  text-align: left;
-  text-decoration: underline;
-  text-decoration: overline;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 900;
 }
-.full {
-  background-image: url("https://img.freepik.com/free-vector/seamless-pattern-with-burger-suitable-backgrounds-postcards-wrapping-paper-vector_174639-19568.jpg");
-  color: black;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+li a.active, li a:hover{
+  background:yellow;
+  transition: .5s;
 }
-
-.but {
-  width: 20px;
-  height: 5px;
-  background-color: white;
-  margin: 6px 0;
+.checkbtn{
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
 }
-.pan {
-  text-align: center;
-  font-size: 20px;
-  font-family: monospace;
-  list-style: none;
-  position: relative;
-  top: -5px;
-  left: -10px;
+#check{
+  display: none;
 }
-.pat {
-  text-align: center;
-  font-size: 20px;
-  font-family: monospace;
-  list-style: none;
-  position: relative;
-  top: -5px;
-  left: -10px;
-}
-.dri {
-  text-align: center;
-  font-size: 20px;
-  font-family: monospace;
-  list-style: none;
-  position: relative;
-  top: -5px;
-  left: -10px;
-}
-.des {
-  text-align: center;
-  font-size: 20px;
-  font-family: monospace;
-  list-style: none;
+section{
+  background: url(fondo.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: calc(100vh - 80px);
 }
 
+@media (max-width: 952px){
+  .enlace{
+      padding-left: 20px;
+  }
+  nav ul li a{
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 858px){
+  .checkbtn{
+      display: block;
+  }
+  ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+  }
+  nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+  }
+  nav ul li a{
+      font-size: 20px;
+  }
+  li a:hover, li a.active{
+      background: none;
+      color: red;
+  }
+  #check:checked ~ ul{
+      left:0;
+  }
+}
+
+
+https://www.youtube.com/watch?v=f7QujqArvIw
